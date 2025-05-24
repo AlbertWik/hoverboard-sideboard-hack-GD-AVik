@@ -24,23 +24,23 @@ jobs:
         VARIANT: VARIANT_DEBUG
       run: make
 
-
-
-
-    - name: All done, stop execution
-      run: |
-        echo "Skipping the rest of the workflow."
-        exit 0
-
-      
-
-
-    - name: Upload AllBuild Artifacts
+    - name: Upload AllBuild Artifacts of make
       uses: actions/upload-artifact@v4
       with:
         name: build_dir
         path: ${{github.workspace}}/build/**
         retention-days: 1
+
+
+
+
+    # Skip the rest of this file
+    - name: All done, stop execution
+      run: |
+        echo "Skipping the rest of the workflow."
+        exit 0
+
+
 
     
     # Build with Platformio
