@@ -36,9 +36,9 @@ jobs:
 
     # Skip the rest of this file
     - name: Stop Codespace after build
-      run: gh codespace stop
-
-
+      run: |
+        gh codespace stop
+        exit 0
 
     
     # Build with Platformio
