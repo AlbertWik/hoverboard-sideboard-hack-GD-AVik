@@ -36,7 +36,7 @@ jobs:
 
     # Skip the rest of this file
     - name: Stop Codespace after build
-        run: gh codespace stop ${{github.workspace}}
+      run: gh codespace stop ${{github.workspace}}
 
 
 
