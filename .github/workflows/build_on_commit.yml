@@ -24,6 +24,15 @@ jobs:
         VARIANT: VARIANT_DEBUG
       run: make
 
+
+
+
+    # Skip the rest of yml file
+    - name: all_done
+      exit 0
+      
+
+
     - name: Upload AllBuild Artifacts
       uses: actions/upload-artifact@v4
       with:
