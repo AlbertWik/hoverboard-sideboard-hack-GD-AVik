@@ -27,9 +27,11 @@ jobs:
 
 
 
-    # Skip the rest of yml file
-    - name: all_done
-      exit 0
+    - name: All done, stop execution
+      run: |
+        echo "Skipping the rest of the workflow."
+        exit 0
+
       
 
 
