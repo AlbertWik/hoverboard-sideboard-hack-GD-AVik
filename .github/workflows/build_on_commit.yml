@@ -35,10 +35,8 @@ jobs:
 
 
     # Skip the rest of this file
-    - name: All done, stop execution
-      run: |
-        echo "Skipping the rest of the workflow."
-        exit 0
+    - name: Stop Codespace after build
+        run: gh codespace stop ${{github.workspace}}
 
 
 
